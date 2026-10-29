@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos | Análise Combinatória</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="agrupamentos.html">Agrupamentos</a>
+        <a href="aplicacoes.html">Aplicações</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Fundamentos da Contagem</h2>
+
+            <div class="destaque-inicio">
+
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23f4f6f8'/><g font-family='Arial' font-weight='bold' font-size='22' text-anchor='middle'><circle cx='70' cy='200' r='34' fill='%231f3c5b'/><text x='70' y='208' fill='%23fff'>Início</text><g stroke='%231f3c5b' stroke-width='3'><line x1='104' y1='200' x2='230' y2='90'/><line x1='104' y1='200' x2='230' y2='200'/><line x1='104' y1='200' x2='230' y2='310'/><line x1='290' y1='90' x2='420' y2='50'/><line x1='290' y1='90' x2='420' y2='130'/><line x1='290' y1='200' x2='420' y2='170'/><line x1='290' y1='200' x2='420' y2='250'/><line x1='290' y1='310' x2='420' y2='290'/><line x1='290' y1='310' x2='420' y2='370'/></g><circle cx='260' cy='90' r='30' fill='%23c0392b'/><text x='260' y='98' fill='%23fff'>A</text><circle cx='260' cy='200' r='30' fill='%23c0392b'/><text x='260' y='208' fill='%23fff'>B</text><circle cx='260' cy='310' r='30' fill='%23c0392b'/><text x='260' y='318' fill='%23fff'>C</text><g fill='%23fff' stroke='%231f3c5b' stroke-width='3'><circle cx='450' cy='50' r='28'/><circle cx='450' cy='130' r='28'/><circle cx='450' cy='170' r='28'/><circle cx='450' cy='250' r='28'/><circle cx='450' cy='290' r='28'/><circle cx='450' cy='370' r='24'/></g><g fill='%231f3c5b'><text x='450' y='58'>1</text><text x='450' y='138'>2</text><text x='450' y='178'>1</text><text x='450' y='258'>2</text><text x='450' y='298'>1</text><text x='450' y='378' font-size='20'>2</text></g><text x='550' y='210' fill='%231f3c5b' font-size='26'>3 × 2</text><text x='550' y='240' fill='%231f3c5b' font-size='26'>= 6</text></g></svg>" alt="Árvore de possibilidades com três ramos">
+
+                <div class="texto-destaque">
+
+                    <h3>Antes de fórmulas, a ideia de contar</h3>
+
+                    <p>
+                        Toda a Análise Combinatória nasce de um raciocínio
+                        simples: dividir um problema em etapas e contar
+                        quantas escolhas existem em cada uma delas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Princípio Fundamental da Contagem (multiplicativo)
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        Se um evento pode ocorrer em várias etapas
+                        <strong>sucessivas e independentes</strong>, o número
+                        total de possibilidades é o produto do número de
+                        possibilidades de cada etapa.
+                    </p>
+                    <p>
+                        <strong>Exemplo:</strong> uma pessoa tem 3 camisas e
+                        4 calças. Pode se vestir de 3 × 4 = 12 maneiras
+                        diferentes.
+                    </p>
+                    <p>
+                        <strong>Dica para o ENEM:</strong> sempre que aparecer
+                        "e" (escolher uma camisa <em>e</em> uma calça),
+                        pense em multiplicar.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Princípio Aditivo
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        Quando há escolhas que <strong>não podem acontecer ao
+                        mesmo tempo</strong>, o total de possibilidades é a soma
+                        das possibilidades de cada caso.
+                    </p>
+                    <p>
+                        <strong>Exemplo:</strong> para ir de casa à escola, é
+                        possível usar 2 linhas de ônibus <em>ou</em> 3 rotas de
+                        bicicleta. Há 2 + 3 = 5 maneiras de fazer o trajeto.
+                    </p>
+                    <p>
+                        <strong>Relação importante:</strong>
+                        "e" → multiplicação; "ou" → adição.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Fatorial
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        O fatorial de um número natural <em>n</em>, representado
+                        por <strong>n!</strong>, é o produto de todos os números
+                        naturais de 1 até <em>n</em>.
+                    </p>
+                    <p>
+                        Exemplos: 3! = 3 × 2 × 1 = 6 e 5! = 5 × 4 × 3 × 2 × 1 = 120.
+                    </p>
+                    <p>
+                        Por definição, <strong>0! = 1</strong> e 1! = 1.
+                    </p>
+                    <p>
+                        O fatorial cresce muito rápido: 10! já vale 3.628.800.
+                        Por isso, é comum simplificar frações com fatoriais,
+                        como 6!/4! = 6 × 5 = 30.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Árvore de possibilidades
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        A árvore de possibilidades é um diagrama que mostra
+                        todas as combinações possíveis, etapa por etapa.
+                        Cada ramo representa uma escolha.
+                    </p>
+                    <p>
+                        Ela é útil para visualizar problemas pequenos e para
+                        confirmar que o Princípio Fundamental da Contagem
+                        funciona: na imagem acima, 3 opções na primeira etapa
+                        e 2 na segunda geram 3 × 2 = 6 caminhos.
+                    </p>
+                    <p>
+                        <strong>Atenção para o ENEM:</strong>
+                        em problemas maiores, desenhar a árvore é inviável.
+                        O objetivo da Análise Combinatória é justamente
+                        contar sem precisar listar tudo.
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto Análise Combinatória</p>
+        <p>Colégio São Luiz - unidade 3 - alunos do 3º ano do Ensino Médio</p>
+        <p>Feito por Julia Santos e Isabela Miranda</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

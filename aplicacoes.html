@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicações | Análise Combinatória</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="agrupamentos.html">Agrupamentos</a>
+        <a href="aplicacoes.html">Aplicações</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Análise Combinatória no Dia a Dia</h2>
+
+            <div class="destaque-inicio">
+
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%231f3c5b'/><g font-family='Arial' font-weight='bold' text-anchor='middle'><rect x='60' y='150' width='190' height='190' rx='22' fill='%23f4f6f8'/><path d='M110 150 v-45 a45 45 0 0 1 90 0 v45' fill='none' stroke='%23f4f6f8' stroke-width='16'/><circle cx='155' cy='225' r='20' fill='%231f3c5b'/><rect x='147' y='225' width='16' height='50' rx='6' fill='%231f3c5b'/><g fill='%23c0392b'><rect x='300' y='170' width='60' height='80' rx='10'/><rect x='375' y='170' width='60' height='80' rx='10'/><rect x='450' y='170' width='60' height='80' rx='10'/></g><g font-size='46' fill='%23fff'><text x='330' y='228'>4</text><text x='405' y='228'>1</text><text x='480' y='228'>7</text></g><text x='405' y='300' font-size='24' fill='%23fff'>10 × 10 × 10 = 1000 senhas</text><text x='405' y='120' font-size='26' fill='%23fff'>Senhas, placas, sorteios</text></g></svg>" alt="Cadeado e senha numérica de três dígitos">
+
+                <div class="texto-destaque">
+
+                    <h3>Contar está em toda parte</h3>
+
+                    <p>
+                        Segurança digital, loterias, esportes e até a
+                        genética usam os mesmos métodos de contagem que você
+                        aprendeu neste site.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Senhas e segurança
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        Uma senha numérica de 4 dígitos, com repetição permitida,
+                        tem 10 × 10 × 10 × 10 = 10.000 possibilidades.
+                    </p>
+                    <p>
+                        Se a senha tiver 8 caracteres entre letras
+                        (maiúsculas e minúsculas) e números, são 62 opções por
+                        posição, ou seja, 62⁸ possibilidades, um número
+                        enorme. Por isso senhas longas e variadas são mais
+                        seguras.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Placas de veículos
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        O modelo Mercosul tem 3 letras, 1 número, 1 letra e
+                        2 números (por exemplo, ABC1D23).
+                    </p>
+                    <p>
+                        Pelo princípio multiplicativo, são
+                        26 × 26 × 26 × 10 × 26 × 10 × 10 = 456.976.000
+                        placas possíveis, o que explica por que o sistema
+                        antigo (3 letras e 4 números) precisou ser ampliado.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Loterias
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        Na Mega-Sena, escolhem-se 6 dezenas entre 60. A ordem
+                        do sorteio não importa, então usamos combinação.
+                    </p>
+                    <p>
+                        C(60, 6) = 50.063.860. Isso significa que uma aposta
+                        simples tem 1 chance em mais de 50 milhões de ganhar
+                        o prêmio máximo.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Probabilidade
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        A Análise Combinatória é a base da Probabilidade:
+                        <strong>probabilidade = casos favoráveis / casos
+                        possíveis</strong>, e muitas vezes os dois valores são
+                        encontrados por contagem.
+                    </p>
+                    <p>
+                        Exemplo: ao sortear 2 alunos entre 10 (4 meninas e
+                        6 meninos), qual a chance de serem 2 meninas?
+                        Casos favoráveis: C(4, 2) = 6. Casos possíveis:
+                        C(10, 2) = 45. Probabilidade = 6/45 = 2/15.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="acordeao">
+
+                <button class="titulo-acordeao">
+                    Como resolver um problema
+                    <span>+</span>
+                </button>
+
+                <div class="conteudo-acordeao">
+
+                    <p>
+                        Siga um roteiro simples:
+                    </p>
+                    <p>
+                        1) Identifique as etapas do problema. 2) Pergunte se
+                        a ordem importa. 3) Se importa, use arranjo ou
+                        permutação; se não importa, use combinação.
+                        4) Verifique se há elementos repetidos ou restrições.
+                        5) Calcule e confira se o resultado faz sentido.
+                    </p>
+                    <p>
+                        <strong>Atenção para o ENEM:</strong>
+                        o maior desafio é interpretar o enunciado. Em muitas
+                        questões, a dificuldade não está na conta, mas em
+                        decidir qual método usar. Treine com o quiz!
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto Análise Combinatória</p>
+        <p>Colégio São Luiz - unidade 3 - alunos do 3º ano do Ensino Médio</p>
+        <p>Feito por Julia Santos e Isabela Miranda</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

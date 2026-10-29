@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupamentos | Análise Combinatória</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="agrupamentos.html">Agrupamentos</a>
+        <a href="aplicacoes.html">Aplicações</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Tipos de Agrupamentos</h2>
+
+            <div class="destaque-inicio">
+
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23fff'/><g font-family='Arial' font-weight='bold' text-anchor='middle'><text x='300' y='50' font-size='26' fill='%231f3c5b'>ABC, ACB, BAC, BCA, CAB, CBA</text><g font-size='38' fill='%23fff'><rect x='40' y='90' width='150' height='90' rx='14' fill='%231f3c5b'/><text x='115' y='150'>A B C</text><rect x='225' y='90' width='150' height='90' rx='14' fill='%231f3c5b'/><text x='300' y='150'>A C B</text><rect x='410' y='90' width='150' height='90' rx='14' fill='%231f3c5b'/><text x='485' y='150'>B A C</text></g><text x='300' y='225' font-size='22' fill='%23c0392b'>Ordem importa: arranjo e permutação</text><line x1='40' y1='250' x2='560' y2='250' stroke='%23cbd3da' stroke-width='3'/><g font-size='38' fill='%23fff'><rect x='150' y='280' width='140' height='80' rx='40' fill='%23c0392b'/><text x='220' y='334'>A B</text><rect x='320' y='280' width='140' height='80' rx='40' fill='%23c0392b'/><text x='390' y='334'>B A</text></g><text x='300' y='385' font-size='22' fill='%231f3c5b'>Ordem não importa: AB = BA (combinação)</text></g></svg>" alt="Agrupamentos em que a ordem importa e em que não importa">
+
+                <div class="texto-destaque">
+
+                    <h3>A pergunta-chave: a ordem importa?</h3>
+
+                    <p>
+                        Para escolher a fórmula certa, comece sempre perguntando
+                        se trocar a ordem dos elementos gera um resultado
+                        diferente.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ARRANJO E COMBINAÇÃO -->
+
+            <div class="blocos-guerra">
+
+                <button class="bloco-guerra" onclick="mostrarBlocoGuerra('arranjo')">
+                    <h3>Arranjo</h3>
+
+                    <p>
+                        A ordem importa
+                    </p>
+
+                    <span>Clique para saber mais</span>
+                </button>
+
+                <div class="seta-guerra">
+                    ↔
+                </div>
+
+                <button class="bloco-guerra" onclick="mostrarBlocoGuerra('combinacao')">
+                    <h3>Combinação</h3>
+
+                    <p>
+                        A ordem não importa
+                    </p>
+
+                    <span>Clique para saber mais</span>
+                </button>
+
+            </div>
+
+            <!-- CONTEÚDO DO ARRANJO -->
+
+            <div id="arranjo" class="conteudo-guerra">
+
+                <h3>Arranjo simples</h3>
+
+                <p>
+                    No arranjo, escolhemos <em>p</em> elementos entre <em>n</em>
+                    disponíveis, e a <strong>ordem faz diferença</strong>.
+                </p>
+
+                <p>
+                    Fórmula: <strong>A(n, p) = n! / (n − p)!</strong>
+                </p>
+
+                <p>
+                    Exemplo: em uma corrida com 5 atletas, de quantas maneiras
+                    podem ser distribuídos ouro e prata? A(5, 2) = 5 × 4 = 20,
+                    pois ser ouro é diferente de ser prata.
+                </p>
+
+            </div>
+
+            <!-- CONTEÚDO DA COMBINAÇÃO -->
+
+            <div id="combinacao" class="conteudo-guerra">
+
+                <h3>Combinação simples</h3>
+
+                <p>
+                    Na combinação, escolhemos <em>p</em> elementos entre
+                    <em>n</em> disponíveis, e a
+                    <strong>ordem não faz diferença</strong>: o que importa é
+                    apenas quais elementos foram escolhidos.
+                </p>
+
+                <p>
+                    Fórmula: <strong>C(n, p) = n! / [p! · (n − p)!]</strong>
+                </p>
+
+                <p>
+                    Exemplo: de um grupo de 5 alunos, quantas duplas podem ser
+                    formadas? C(5, 2) = 10, pois a dupla Ana e Bia é a mesma
+                    que Bia e Ana.
+                </p>
+
+            </div>
+
+            <!-- LINHA DO TEMPO (agora: tipos de contagem) -->
+
+            <div class="linha-tempo">
+
+                <h3>Os cinco tipos de contagem</h3>
+
+                <div class="anos">
+
+                    <button onclick="mostrarAno('t-perm', this)">
+                        Perm.
+                    </button>
+
+                    <button onclick="mostrarAno('t-rep', this)">
+                        Repet.
+                    </button>
+
+                    <button onclick="mostrarAno('t-arr', this)">
+                        Arranjo
+                    </button>
+
+                    <button onclick="mostrarAno('t-comb', this)">
+                        Comb.
+                    </button>
+
+                    <button onclick="mostrarAno('t-circ', this)">
+                        Circ.
+                    </button>
+
+                </div>
+
+                <div id="t-perm" class="evento">
+
+                    <h4>Permutação simples</h4>
+
+                    <p>
+                        Ordena todos os <em>n</em> elementos distintos de um
+                        conjunto. Fórmula: <strong>P(n) = n!</strong>
+                    </p>
+
+                    <p>
+                        Exemplo: os anagramas da palavra AMOR (4 letras
+                        diferentes) são 4! = 24.
+                    </p>
+
+                </div>
+
+                <div id="t-rep" class="evento">
+
+                    <h4>Permutação com elementos repetidos</h4>
+
+                    <p>
+                        Quando há elementos iguais, dividimos pelo fatorial
+                        de cada repetição:
+                        <strong>n! / (a! · b! · ...)</strong>
+                    </p>
+
+                    <p>
+                        Exemplo: os anagramas de ARARA (3 letras A e 2 letras R)
+                        são 5! / (3! · 2!) = 120 / 12 = 10.
+                    </p>
+
+                </div>
+
+                <div id="t-arr" class="evento">
+
+                    <h4>Arranjo simples</h4>
+
+                    <p>
+                        Escolhe <em>p</em> entre <em>n</em> elementos,
+                        com ordem importando.
+                        <strong>A(n, p) = n! / (n − p)!</strong>
+                    </p>
+
+                    <p>
+                        Exemplo: presidente e vice de uma turma com 10 alunos:
+                        A(10, 2) = 10 × 9 = 90 possibilidades.
+                    </p>
+
+                </div>
+
+                <div id="t-comb" class="evento">
+
+                    <h4>Combinação simples</h4>
+
+                    <p>
+                        Escolhe <em>p</em> entre <em>n</em> elementos,
+                        sem importar a ordem.
+                        <strong>C(n, p) = n! / [p! · (n − p)!]</strong>
+                    </p>
+
+                    <p>
+                        Exemplo: uma comissão de 3 pessoas escolhida entre
+                        6: C(6, 3) = 20 comissões.
+                    </p>
+
+                    <p>
+                        A combinação sempre é menor ou igual ao arranjo, pois
+                        C(n, p) = A(n, p) / p!.
+                    </p>
+
+                </div>
+
+                <div id="t-circ" class="evento">
+
+                    <h4>Permutação circular</h4>
+
+                    <p>
+                        Usada quando os elementos são dispostos em círculo, como
+                        pessoas em uma mesa redonda. Como as rotações geram o
+                        mesmo arranjo, fixamos uma pessoa:
+                        <strong>PC(n) = (n − 1)!</strong>
+                    </p>
+
+                    <p>
+                        Exemplo: 4 pessoas em uma mesa redonda podem se sentar de
+                        (4 − 1)! = 6 maneiras diferentes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto Análise Combinatória</p>
+        <p>Colégio São Luiz - unidade 3 - alunos do 3º ano do Ensino Médio</p>
+        <p>Feito por Julia Santos e Isabela Miranda</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
